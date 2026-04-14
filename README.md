@@ -1,6 +1,6 @@
 # Alphora
 
-QuantLab is a modular Python 3.11 quant trading research and backtesting platform. It includes historical market-data storage for PostgreSQL, reusable strategy abstractions, a lightweight backtest engine, performance metrics, portfolio tracking, and a Streamlit dashboard for quick local exploration.
+Alphora is a modular Python 3.11 quant trading research and backtesting platform. It includes historical market-data storage for PostgreSQL, reusable strategy abstractions, a lightweight backtest engine, performance metrics, portfolio tracking, and a Streamlit dashboard for quick local exploration.
 
 ## Features
 
@@ -18,7 +18,7 @@ QuantLab is a modular Python 3.11 quant trading research and backtesting platfor
 ## Project Structure
 
 ```text
-QuantLab/
+Alphora/
 |-- app/
 |-- dashboard/
 |-- notebooks/
@@ -54,13 +54,13 @@ pip install -r requirements.txt
 3. Configure PostgreSQL access with an environment variable:
 
 ```powershell
-$env:QUANTLAB_DATABASE_URL = "postgresql+psycopg2://postgres:postgres@localhost:5432/quantlab"
+$env:ALPHORA_DATABASE_URL = "postgresql+psycopg2://postgres:postgres@localhost:5432/alphora"
 ```
 
 4. Initialize the storage schema:
 
 ```powershell
-psql -d quantlab -f sql/market_data_schema.sql
+psql -d alphora -f sql/market_data_schema.sql
 ```
 
 5. Optional: create the SQLAlchemy-managed tables from Python instead:
@@ -116,7 +116,7 @@ The demo script creates the SQLAlchemy tables, downloads data with `yfinance`, u
 1. Install Python 3.11 and PostgreSQL.
 2. Create and activate a virtual environment.
 3. Run `pip install -r requirements.txt`.
-4. Set `QUANTLAB_DATABASE_URL`.
+4. Set `ALPHORA_DATABASE_URL`.
 5. Run `pytest`.
 6. Run `streamlit run dashboard/app.py`.
 
