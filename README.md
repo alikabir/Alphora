@@ -1,4 +1,4 @@
-# QuantLab
+# Alphora
 
 QuantLab is a modular Python 3.11 quant trading research and backtesting platform. It includes historical market-data storage for PostgreSQL, reusable strategy abstractions, a lightweight backtest engine, performance metrics, portfolio tracking, and a Streamlit dashboard for quick local exploration.
 
