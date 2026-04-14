@@ -37,7 +37,7 @@ class MarketDataLoader:
         try:
             engine = self.get_engine()
             Base.metadata.create_all(engine)
-            logger.info("Initialized QuantLab database schema.")
+            logger.info("Initialized Alphora database schema.")
         except SQLAlchemyError as exc:
             logger.exception("Failed to initialize database schema.")
             raise RuntimeError("Unable to initialize the database schema.") from exc

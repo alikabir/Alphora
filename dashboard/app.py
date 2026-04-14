@@ -1,4 +1,4 @@
-"""Minimal Streamlit dashboard for QuantLab backtests."""
+"""Minimal Streamlit dashboard for Alphora backtests."""
 
 from __future__ import annotations
 
@@ -97,11 +97,11 @@ def run_backtest(
 
 
 def main() -> None:
-    """Render the QuantLab dashboard."""
+    """Render the Alphora dashboard."""
     settings = Settings()
 
-    st.set_page_config(page_title="QuantLab", layout="wide")
-    st.title("QuantLab")
+    st.set_page_config(page_title="Alphora", layout="wide")
+    st.title("Alphora")
     st.caption("Minimal research dashboard for strategy backtests")
 
     st.sidebar.header("Backtest Setup")

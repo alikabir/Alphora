@@ -1,4 +1,4 @@
-"""Strategy implementations for QuantLab."""
+"""Strategy implementations for Alphora."""
 
 from strategies.base import StrategyBase
 from strategies.momentum import MomentumStrategy

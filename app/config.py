@@ -1,4 +1,4 @@
-"""Configuration helpers for QuantLab."""
+"""Configuration helpers for Alphora."""
 
 from __future__ import annotations
 
@@ -11,8 +11,11 @@ class Settings:
     """Application settings with sensible local defaults."""
 
     database_url: str = os.getenv(
-        "QUANTLAB_DATABASE_URL",
-        "postgresql+psycopg2://postgres:postgres@localhost:5432/quantlab",
+        "ALPHORA_DATABASE_URL",
+        os.getenv(
+            "QUANTLAB_DATABASE_URL",
+            "postgresql+psycopg2://postgres:postgres@localhost:5432/alphora",
+        ),
     )
     initial_capital: float = 100_000.0
     fee_rate: float = 0.001

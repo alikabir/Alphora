@@ -27,9 +27,9 @@ def make_download_frame() -> pd.DataFrame:
 
 
 def test_fetch_market_data_normalizes_yfinance_output(monkeypatch) -> None:
-    """Downloaded data should be normalized into QuantLab's expected shape."""
+    """Downloaded data should be normalized into Alphora's expected shape."""
     monkeypatch.setattr("app.data_loader.yf.download", lambda *args, **kwargs: make_download_frame())
-    loader = MarketDataLoader(database_url="postgresql+psycopg2://user:pass@localhost:5432/quantlab")
+    loader = MarketDataLoader(database_url="postgresql+psycopg2://user:pass@localhost:5432/alphora")
 
     result = loader.fetch_market_data(ticker="aapl", start_date="2024-01-01", end_date="2024-01-31")
 
@@ -56,7 +56,7 @@ def test_fetch_and_store_data_calls_save(monkeypatch) -> None:
     expected = make_download_frame()
     expected["ticker"] = "NVDA"
     expected.index.name = "date"
-    loader = MarketDataLoader(database_url="postgresql+psycopg2://user:pass@localhost:5432/quantlab")
+    loader = MarketDataLoader(database_url="postgresql+psycopg2://user:pass@localhost:5432/alphora")
     captured: dict[str, pd.DataFrame] = {}
 
     def fake_fetch(self, ticker: str, start_date: str, end_date: str) -> pd.DataFrame:
@@ -151,7 +151,7 @@ def test_load_data_from_db_builds_expected_dataframe(monkeypatch) -> None:
 
     monkeypatch.setattr(MarketDataLoader, "get_engine", lambda self: object())
     monkeypatch.setattr("app.data_loader.Session", lambda engine: FakeSession(rows))
-    loader = MarketDataLoader(database_url="postgresql+psycopg2://user:pass@localhost:5432/quantlab")
+    loader = MarketDataLoader(database_url="postgresql+psycopg2://user:pass@localhost:5432/alphora")
 
     result = loader.load_data_from_db("AMD", "2024-01-01", "2024-01-02")
 

@@ -1,4 +1,4 @@
-"""Core application package for QuantLab."""
+"""Core application package for Alphora."""
 
 from app.backtest import BacktestEngine, BacktestResult
 from app.config import Settings

@@ -2,7 +2,7 @@
 
 ## Repository Purpose
 
-QuantLab is a modular quant trading research and backtesting scaffold focused on clean Python 3.11 code, readable abstractions, and easy local experimentation.
+Alphora is a modular quant trading research and backtesting scaffold focused on clean Python 3.11 code, readable abstractions, and easy local experimentation.
 
 ## Working Agreements
 

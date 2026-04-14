@@ -1,4 +1,4 @@
-"""SQLAlchemy models for QuantLab persistence."""
+"""SQLAlchemy models for Alphora persistence."""
 
 from __future__ import annotations
 
@@ -9,7 +9,7 @@ from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 
 
 class Base(DeclarativeBase):
-    """Base declarative class for QuantLab models."""
+    """Base declarative class for Alphora models."""
 
 
 class HistoricalMarketData(Base):
